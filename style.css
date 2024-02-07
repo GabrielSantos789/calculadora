@@ -1,0 +1,92 @@
+@media screen {
+    :root {
+        --background:#8CD5EE;
+        --div-background:#ECA400;
+        --btn-background: #0B3954;
+    }
+
+    * {
+        padding: 0;
+        margin: none;
+    }
+
+    body {
+        background-color: var(--background);
+    }
+
+    .container {
+        position: absolute;
+        --container-position: 50%;
+        top: var(--container-position);
+        left: var(--container-position);
+        border: 1px solid black;
+        transform: translate(
+            calc(var(--container-position)*-1),    
+            calc(var(--container-position)*-1)        
+        );
+    }
+
+    .content {
+        background-color: var(--div-background);
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+        padding: 10px;
+        width: 300px;
+        box-shadow: 13px 12px 0px #000000b9;
+    }
+
+    .content > h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    input {
+        border: none;
+        border-radius: 8px;
+        padding: 7px 10px;
+        margin: 8px 0px;
+    }
+
+    button {
+        background-color: var(--btn-background);
+        color: #ffffff;
+        padding: 6px;
+        height: 32px;
+        width: 188px;
+        margin: 6px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color:#126291;
+        transition: 0.2s;
+    }
+
+    .js-paragraph {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    noscript > p {
+        font-family: Arial, Helvetica, sans-serif
+    }
+}
+
+/*---------------------------------------------------------------------------*/
+/*----------------------------- mobile devices ------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+@media screen and (max-width: 400px) {
+    .content {
+        width: 80vw;
+    }
+
+    .js-paragraph {
+        font-size: 1.3em;
+    }
+}
